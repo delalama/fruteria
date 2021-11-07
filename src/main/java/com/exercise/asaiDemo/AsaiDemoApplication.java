@@ -4,7 +4,7 @@ import com.exercise.asaiDemo.entity.Offer;
 import com.exercise.asaiDemo.repository.OfferDao;
 import com.exercise.asaiDemo.repository.ProductDao;
 import com.exercise.asaiDemo.entity.Product;
-import com.exercise.asaiDemo.service.FacturaService;
+import com.exercise.asaiDemo.service.BillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -26,7 +26,7 @@ public class AsaiDemoApplication implements CommandLineRunner {
 	OfferDao offerDao;
 
 	@Autowired
-	FacturaService facturaService;
+	BillService facturaService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AsaiDemoApplication.class, args);
@@ -48,7 +48,7 @@ public class AsaiDemoApplication implements CommandLineRunner {
 		printTotalFactura(appProducts.getProducts()) ;
 
 		System.out.println("PUEDES ACCEDER CON TU NAVEGADOR PARA ATENDER CLIENTES");
-		System.out.println("http://localhost:8080/tienda");
+		System.out.println("http://localhost:8080/shop");
 	}
 
 	private void printOffers(List<Offer> offerList) {

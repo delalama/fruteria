@@ -3,14 +3,12 @@ package com.exercise.asaiDemo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class Factura {
+public class Bill {
     private List<Product> products;
 
     public Double getTotalPrice() {
