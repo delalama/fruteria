@@ -1,0 +1,29 @@
+business:
+  name: COLMADO JUAN
+  employee: JUAN
+
+
+#DATA TO EMULATE STATIC BOUGHT
+stock:
+  products:
+    -
+      name: PEAR
+      price: 5.5
+      quantity: 9
+    -
+      name: ORANGE
+      price: 3.5
+      quantity: 4
+    -
+      name: APPLE
+      price: 2
+      quantity: 14
+
+offer:
+  active:
+    -
+      name: -Buy 3 Apples and pay 2
+    -
+      name: -Get a free Orange for every 2 Pears you buy
+    -
+      name: -For every 4 € spent on Pears, we will deduct one euro from your final invoice

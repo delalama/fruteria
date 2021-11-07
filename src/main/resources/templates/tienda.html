@@ -1,0 +1,67 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <script type="text/javascript" th:src="@{/js/postProduct.js}"></script>
+    <script type="text/javascript" th:src="@{/css/css.css}"></script>
+    <script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        .tableDiv {
+            width: 80vw;
+            margin: auto;
+            margin-top: 10vh;
+        }
+
+        .name {
+            margin: auto;
+            margin-top: 10vh;
+        }
+
+        .header {
+            margin: auto;
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1 class="name" th:text=${nombre}></h1>
+</div>
+
+<div class="tableDiv">
+    <h1>COMPRA</h1>
+
+    Name : <input id="pName" type="text" name="productName"/>
+    Price : <input id="pPrice" type="text" name="productPrice"/>
+    Quantity : <input id="pQuantity" type="text" name="productQuantity"/>
+
+    <button class="btn btn-primary" th:onclick="addProduct()">Añadir</button>
+
+
+    <button class="btn btn-primary" th:onclick="getFactura()">Factura</button>
+
+    <h1 scope="col" id="errorMessage"></h1>
+
+
+    <h1>FACTURA</h1>
+
+    <th><span>FACTURA</span></th>
+
+    <table class="table">
+        <thead>
+        <th scope="col">TOTAL</th>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="col" id="totalBill"></th>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>
