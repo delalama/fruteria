@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Service to implement Offers logic.
+ */
 @Service
 public class OfferService {
     @Autowired

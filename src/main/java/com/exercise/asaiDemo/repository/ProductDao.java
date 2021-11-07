@@ -8,6 +8,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
+/**
+ * This class emulates the behaviour of a repository.
+ * In this case we only want static data that we found in application.yml
+ */
 @Component
 @ConfigurationProperties(prefix = "stock", ignoreInvalidFields = true)
 @Getter

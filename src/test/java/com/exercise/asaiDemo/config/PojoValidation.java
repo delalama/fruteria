@@ -19,7 +19,7 @@ public class PojoValidation {
 
         List<PojoClass> pojoClasses = PojoClassFactory.getPojoClasses("com.exercise.asaiDemo.entity");
 
-        Assertions.assertEquals(2, pojoClasses.size());
+        Assertions.assertEquals(3, pojoClasses.size());
 
         Validator validator =
                 ValidatorBuilder.create()

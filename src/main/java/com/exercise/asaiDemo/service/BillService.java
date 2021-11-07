@@ -4,9 +4,13 @@ import com.exercise.asaiDemo.repository.ProductDao;
 import com.exercise.asaiDemo.entity.Bill;
 import com.exercise.asaiDemo.entity.Product;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
+/**
+ * Service to isolate bill operations.
+ * OfferService has been extracted in order to only have one place to
+ * develop offers logic.
+ */
 @Service
 public class BillService {
 
