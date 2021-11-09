@@ -1,12 +1,10 @@
 package com.exercise.asaiDemo.offer;
 
 import com.exercise.asaiDemo.entity.Product;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Slf4j
 @Component
 public class EveryFourEurosOnPearsOneEuroDiscount implements OfferInterface {
 
