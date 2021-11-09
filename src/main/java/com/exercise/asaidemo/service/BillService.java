@@ -35,7 +35,7 @@ public class BillService {
 
         BigDecimal discount = BigDecimal.ZERO;
 
-        if(offerService.ACTIVE_OFFERS) {
+        if (offerService.ACTIVE_OFFERS) {
             discount = calculateDiscount(products);
         }
         log.info("A PAGAR : " + (total.subtract(discount)) + " €.");

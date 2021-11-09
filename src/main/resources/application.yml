@@ -5,16 +5,13 @@ business:
 #DATA TO EMULATE STATIC BOUGHT
 staticpurchase:
   fruits:
-    -
-      name: PEAR
+    - name: PEAR
       price: 5.5
       quantity: 80
-    -
-      name: ORANGE
+    - name: ORANGE
       price: 3.5
       quantity: 10
-    -
-      name: APPLE
+    - name: APPLE
       price: 2
       quantity: 80
 

@@ -8,7 +8,9 @@ import java.util.List;
 public interface OfferInterface {
 
     <T extends Product> BigDecimal calculate(List<T> items);
+
     String getCode();
+
     String getName();
 
     default String getDescription() {

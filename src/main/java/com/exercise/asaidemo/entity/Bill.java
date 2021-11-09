@@ -10,7 +10,7 @@ import java.util.List;
 // las propiedades las convierte final.
 @Value
 @Builder
-public class Bill <T extends Product> {
+public class Bill<T extends Product> {
 
     List<T> products;
 

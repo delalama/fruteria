@@ -19,7 +19,7 @@ public class EveryFourEurosOnPearsOneEuroDiscount implements OfferInterface {
 
         BigDecimal discount = BigDecimal.ZERO;
 
-        if( pearsAmount == 0 ){
+        if (pearsAmount == 0) {
             return discount;
         }
 

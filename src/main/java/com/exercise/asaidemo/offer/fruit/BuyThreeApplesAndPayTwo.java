@@ -18,7 +18,7 @@ public class BuyThreeApplesAndPayTwo implements OfferInterface {
 
         BigDecimal discount = BigDecimal.valueOf(0);
 
-        if( applesAmount == 0 ){
+        if (applesAmount == 0) {
             return discount;
         }
 
@@ -28,7 +28,7 @@ public class BuyThreeApplesAndPayTwo implements OfferInterface {
 
         discount = BigDecimal.valueOf(applesAmount / 3).multiply(apples.get(0).getPrice());
 
-        if (discount.compareTo(BigDecimal.ZERO) == 1 ) {
+        if (discount.compareTo(BigDecimal.ZERO) == 1) {
             log.info(getDescription() + " -> " + discount + " €.");
         }
 

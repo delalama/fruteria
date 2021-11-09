@@ -19,19 +19,19 @@ public class FreeOrangePerTwoPears implements OfferInterface {
 
         BigDecimal discount = BigDecimal.ZERO;
 
-        if(orangesAmount == 0){
+        if (orangesAmount == 0) {
             return discount;
         }
 
         Integer pearsAmount = getAmount(products, "PEAR");
 
-        if (pearsAmount > 1 ) {
+        if (pearsAmount > 1) {
             Integer freeOranges = pearsAmount / 2;
 
             BigDecimal orangesPrice = getOrangePrice(products);
 
             if (orangesAmount >= freeOranges) {
-                discount = orangesPrice.multiply(BigDecimal.valueOf(freeOranges)) ;
+                discount = orangesPrice.multiply(BigDecimal.valueOf(freeOranges));
             } else {
                 discount = BigDecimal.valueOf(orangesAmount).multiply(orangesPrice);
             }
