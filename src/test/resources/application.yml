@@ -1,0 +1,24 @@
+business:
+  name: COLMADO JUAN
+
+
+#DATA TO EMULATE STATIC BOUGHT
+purchase:
+  products:
+    -
+      name: PEAR
+      price: 5.5
+      quantity: 80
+    -
+      name: ORANGE
+      price: 3.5
+      quantity: 10
+    -
+      name: APPLE
+      price: 2
+      quantity: 80
+
+
+active-offers: 0,1,2,3
+
+

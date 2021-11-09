@@ -22,7 +22,7 @@ public class BillController {
 
     @PostMapping(value = "/total", consumes = "application/json")
     @ResponseBody
-    public Double sendPostMessage(@RequestBody List<Product> products) {
+    public Double createBill(@RequestBody List<Product> products) {
 
         return facturaService.createFactura(products);
     }

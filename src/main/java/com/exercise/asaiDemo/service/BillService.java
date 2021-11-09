@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class BillService {
 
-    public final OfferService offerService;
+    private final OfferService offerService;
 
     public BillService(OfferService offerService) {
         this.offerService = offerService;
