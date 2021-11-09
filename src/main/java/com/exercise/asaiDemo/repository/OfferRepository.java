@@ -11,10 +11,11 @@ import java.util.List;
  * This class emulates the behaviour of a repository.
  * In this case we only want static data that we found in application.yml
  */
-@Component
-@ConfigurationProperties(prefix = "offer", ignoreInvalidFields = true)
-@Getter
-@Setter
-public class OfferDao {
-    private List<Offer> active;
-}
+//@Component
+//@ConfigurationProperties(prefix = "offer", ignoreInvalidFields = true)
+//@Getter
+//@Setter
+//public class OfferRepository {
+//
+//    private List<Offer> active;
+//}

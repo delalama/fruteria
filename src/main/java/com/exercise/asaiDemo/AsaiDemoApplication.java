@@ -1,75 +1,44 @@
 package com.exercise.asaiDemo;
 
-import com.exercise.asaiDemo.entity.Offer;
-import com.exercise.asaiDemo.repository.OfferDao;
-import com.exercise.asaiDemo.repository.ProductDao;
-import com.exercise.asaiDemo.entity.Product;
+import com.exercise.asaiDemo.repository.ProductRepository;
 import com.exercise.asaiDemo.service.BillService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.env.Environment;
 
-import java.util.List;
 
 @SpringBootApplication
 public class AsaiDemoApplication implements CommandLineRunner {
 
-	@Autowired
-	private Environment env;
 
-	@Autowired
-	ProductDao appProducts;
+    ProductRepository appProducts;
+    private final String businessName;
+    private final BillService billService;
 
-	@Autowired
-	OfferDao offerDao;
+    public AsaiDemoApplication(ProductRepository appProducts, @Value("${business.name}") String businessName, BillService billService) {
+        this.appProducts = appProducts;
+        this.businessName = businessName;
+        this.billService = billService;
+    }
 
-	@Autowired
-	BillService facturaService;
+    public static void main(String[] args) {
+        SpringApplication.run(AsaiDemoApplication.class, args);
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(AsaiDemoApplication.class, args);
-	}
+    @Override
+    public void run(String... args) {
+        printEnvironmentConfig();
 
-	@Override
-	public void run(String... args) throws Exception {
-		//THIS IS THE CODE TO EMULATE A STATIC BOUGHT ACROSS APPLICATION.YML
-		System.out.println("APLICACIÓN GESTIÓN " + env.getProperty("business.name"));
-		System.out.println("NOMBRE EMPLEADO " + env.getProperty("business.employee"));
+        billService.createFactura(appProducts.getProducts());
+    }
 
-		System.out.println("PRODUCTOS COMPRA");
-		printProducts(appProducts.getProducts());
+    private void printEnvironmentConfig() {
+        String applicationName = "\nAPLICACIÓN GESTIÓN " + businessName;
+        String configuredOffers = "\nOFERTAS DEL DÍA CONFIGURADAS \n" + billService.offerService.printActiveOffers();
+        String webInfo = "\n WEB: http://localhost:8080/shop";
 
-		System.out.println("OFERTAS ACTIVAS");
-		printOffers(offerDao.getActive());
+        System.out.println(applicationName + configuredOffers + webInfo);
+    }
 
-		System.out.println("FACTURA");
-		printTotalFactura(appProducts.getProducts()) ;
-
-		System.out.println("PUEDES ACCEDER CON TU NAVEGADOR PARA ATENDER CLIENTES");
-		System.out.println("http://localhost:8080/shop");
-	}
-
-	private void printOffers(List<Offer> offerList) {
-		offerList.stream().forEach(
-				o -> System.out.println(o.getName())
-		);
-		System.out.println();
-	}
-
-	private void printTotalFactura(List<Product> productList) {
-		System.out.println("** TOTAL **" + facturaService.createFactura(productList));
-	}
-
-	private void printProducts(List<Product> productList) {
-		int index = 1;
-		for(Product p: productList){
-			System.out.println(index + ".");
-			System.out.println("	Nombre: " + p.getName());
-			System.out.println("	Precio: " + p.getPrice());
-			System.out.println("	Cantidad: " + p.getQuantity());
-			index++;
-		}
-	}
 }

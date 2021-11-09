@@ -5,6 +5,7 @@ import com.exercise.asaiDemo.entity.Product;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
@@ -13,9 +14,10 @@ import java.util.List;
  * In this case we only want static data that we found in application.yml
  */
 @Component
-@ConfigurationProperties(prefix = "stock", ignoreInvalidFields = true)
+@ConfigurationProperties(prefix = "purchase", ignoreInvalidFields = true)
 @Getter
 @Setter
-public class ProductDao {
+public class ProductRepository {
+
     private List<Product> products;
 }

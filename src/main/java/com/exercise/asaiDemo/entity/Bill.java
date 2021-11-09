@@ -1,18 +1,20 @@
 package com.exercise.asaiDemo.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.Value;
+
 import java.util.List;
 
-
-@Getter
-@Setter
-@AllArgsConstructor
+// Tanto el Builder como el value de lombok los veo ideales para evitar errores en dev,
+// las propiedades las convierte final.
+@Value
+@Builder
 public class Bill {
-    private List<Product> products;
+
+    List<Product> products;
 
     public Double getTotalPrice() {
+
         return products.stream()
                 .map(p -> p.getPrice() * p.getQuantity())
                 .reduce(0D, Double::sum);

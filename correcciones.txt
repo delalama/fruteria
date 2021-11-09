@@ -1,0 +1,22 @@
+Correción ejercicio Asaitec.
+
+Debido a priorizar un acceso al Billservice a través de html dejé de :
+
+1 - hacer tests.
+2 - homogeneizar código.
+3 - poner las propiedades private final .
+4 - no usar la inyección de dependencias de un modo reusable.
+5 - escalabilidad
+
+
+
+2 - Homogeneizar código:
+Si se realizan TODOS los "for" del mismo modo mejoraremos en legibilidad.
+Al no poder resolver (rápido) mediante stream me incliné por resolverlo del modo que conozco.
+
+4 - A través de @Value y @Builder mejoramos en legibilidad y seguridad durante dev.
+
+5 - El tema que dejé menos escalable fue el de las ofertas.
+Con declarar una interfaz y las implementaciones pertinentes ya tenemos el código ordenado, más coherente que
+un nido de IF's y escalable sin introducir malas prácticas.
+

@@ -6,5 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Offer {
-    private String name;
+    Integer code;
+    String name;
 }
