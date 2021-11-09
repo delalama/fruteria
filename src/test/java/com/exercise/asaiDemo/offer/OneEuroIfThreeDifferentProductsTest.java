@@ -7,11 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class OneEuroIfThreeDifferentProductsTest {
 
-    OneEuroIfThreeDifferentProducts oneEuroIfThreeDifferentProducts = new OneEuroIfThreeDifferentProducts();
+    final OneEuroIfThreeDifferentProducts oneEuroIfThreeDifferentProducts = new OneEuroIfThreeDifferentProducts();
 
     @Test
     public void oneEuroIfThreeDifferentProducts_test() {

@@ -40,7 +40,7 @@ public class FreeOrangePerTwoPears implements OfferInterface {
     private Double getOrangePrice(List<Product> products) {
         return products.stream()
                 .filter(p -> p.getName().equals("ORANGE"))
-                .map(p -> p.getPrice())
+                .map(Product::getPrice)
                 .findFirst()
                 .orElseThrow();
     }
@@ -48,7 +48,7 @@ public class FreeOrangePerTwoPears implements OfferInterface {
     private Integer getAmount(List<Product> products, String orange) {
         return products.stream()
                 .filter(p -> p.getName().equals(orange))
-                .map(p -> p.getQuantity())
+                .map(Product::getQuantity)
                 .reduce(0, Integer::sum);
     }
 

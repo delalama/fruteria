@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class OfferService {
 
     private final List<OfferInterface> offers;
-    public boolean ACTIVE_OFFERS;
+    public final boolean ACTIVE_OFFERS;
 
     public OfferService(final List<OfferInterface> offers, @Value("${active-offers}") final List<String> activeOffersCodes) {
 

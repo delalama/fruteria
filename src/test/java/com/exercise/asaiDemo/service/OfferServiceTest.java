@@ -5,20 +5,19 @@ import com.exercise.asaiDemo.offer.BuyThreeApplesAndPayTwo;
 import com.exercise.asaiDemo.offer.OfferInterface;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class OfferServiceTest {
 
-    List<OfferInterface> offers = Arrays.asList(new BuyThreeApplesAndPayTwo());
+    final List<OfferInterface> offers = List.of(new BuyThreeApplesAndPayTwo());
 
     final List<String> activeOffersCodes = Arrays.asList("0","1","2","3");
 
-    OfferService offerService = new OfferService(offers, activeOffersCodes);
+    final OfferService offerService = new OfferService(offers, activeOffersCodes);
 
     @Test
     public void offerService_test () {
@@ -26,7 +25,7 @@ class OfferServiceTest {
 
         // then
 
-        Assertions.assertEquals(offerService.ACTIVE_OFFERS,true);
+        assertTrue(offerService.ACTIVE_OFFERS);
 
         // when
 
@@ -44,7 +43,7 @@ class OfferServiceTest {
         product0.setQuantity(10);
 
 
-        List<Product> products = Arrays.asList(product0);
+        List<Product> products = List.of(product0);
 
         Double discount = offerService.calculateDiscount(products);
 

@@ -41,7 +41,7 @@ public class BillService {
     }
 
     private Double calculateDiscount(List<Product> products) {
-        Double discount = 0D;
+        Double discount;
 
         System.out.println("** Descuentos **");
         discount = offerService.calculateDiscount(products);

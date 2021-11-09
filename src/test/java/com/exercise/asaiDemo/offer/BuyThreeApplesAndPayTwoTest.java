@@ -9,7 +9,7 @@ import java.util.List;
 
 class BuyThreeApplesAndPayTwoTest {
 
-    BuyThreeApplesAndPayTwo buyThreeApplesAndPayTwo = new BuyThreeApplesAndPayTwo();
+    final BuyThreeApplesAndPayTwo buyThreeApplesAndPayTwo = new BuyThreeApplesAndPayTwo();
 
     @Test
     public void buyThreeApplesAndPayTwo_test() {
@@ -20,7 +20,7 @@ class BuyThreeApplesAndPayTwoTest {
         product0.setPrice(10.5);
         product0.setQuantity(10);
 
-        List<Product> products = Arrays.asList(product0);
+        List<Product> products = List.of(product0);
 
         // when
 

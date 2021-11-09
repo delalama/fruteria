@@ -1,8 +1,6 @@
 package com.exercise.asaiDemo.controller;
 
 import com.exercise.asaiDemo.entity.Product;
-import com.exercise.asaiDemo.repository.ProductRepository;
-import com.exercise.asaiDemo.service.BillService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +22,9 @@ class BillControllerTest {
         Product product0 = new Product();
         product0.setName("ORANGE");
         product0.setQuantity(11);
-        product0.setPrice(Double.valueOf(10));
+        product0.setPrice(10.0);
 
-        List<Product> products = Arrays.asList(product0);
+        List<Product> products = List.of(product0);
 
         // when
 

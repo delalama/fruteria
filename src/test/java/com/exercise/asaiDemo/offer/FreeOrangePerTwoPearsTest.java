@@ -7,11 +7,9 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class FreeOrangePerTwoPearsTest {
 
-    FreeOrangePerTwoPears freeOrangePerTwoPears = new FreeOrangePerTwoPears();
+    final FreeOrangePerTwoPears freeOrangePerTwoPears = new FreeOrangePerTwoPears();
 
     @Test
     public void freeOrangePerTwoPears_test() {
@@ -22,7 +20,7 @@ class FreeOrangePerTwoPearsTest {
         product0.setPrice(10.5);
         product0.setQuantity(10);
 
-        List<Product> products = Arrays.asList(product0);
+        List<Product> products = List.of(product0);
 
         // when
 
