@@ -19,6 +19,4 @@ import java.util.List;
 public class PurchaseRepository {
 
     private List<Fruit> fruits;
-
-
 }
