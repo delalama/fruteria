@@ -3,8 +3,8 @@ business:
 
 
 #DATA TO EMULATE STATIC BOUGHT
-purchase:
-  products:
+staticpurchase:
+  fruits:
     -
       name: PEAR
       price: 5.5

@@ -1,5 +1,6 @@
 package com.exercise.asaiDemo.controller;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
 import com.exercise.asaiDemo.service.BillService;
 import org.springframework.stereotype.Controller;

@@ -1,5 +1,6 @@
 package com.exercise.asaiDemo.service;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
 import com.exercise.asaiDemo.offer.OfferInterface;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,10 +35,10 @@ public class OfferService {
                 .collect(Collectors.joining(System.getProperty("line.separator")));
     }
 
-    public Double calculateDiscount(List<Product> products) {
+    public <T extends Product> Double calculateDiscount(List<T> products) {
 
         return offers.stream()
-                .mapToDouble(offer -> offer.calculate(products))
+                .mapToDouble(offer -> offer.calculate((List<Product>) products))
                 .sum();
     }
 

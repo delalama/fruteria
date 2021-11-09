@@ -1,5 +1,6 @@
 package com.exercise.asaiDemo.repository;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,10 +13,12 @@ import java.util.List;
  * In this case we only want static data that we found in application.yml
  */
 @Component
-@ConfigurationProperties(prefix = "purchase", ignoreInvalidFields = true)
+@ConfigurationProperties(prefix = "staticpurchase", ignoreInvalidFields = true)
 @Getter
 @Setter
-public class ProductRepository {
+public class PurchaseRepository {
 
-    private List<Product> products;
+    private List<Fruit> fruits;
+
+
 }

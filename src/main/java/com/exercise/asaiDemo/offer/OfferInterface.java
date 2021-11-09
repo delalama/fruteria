@@ -1,5 +1,6 @@
 package com.exercise.asaiDemo.offer;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
 
 import java.util.List;

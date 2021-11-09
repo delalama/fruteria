@@ -1,6 +1,8 @@
-package com.exercise.asaiDemo.offer;
+package com.exercise.asaiDemo.offer.fruit;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
+import com.exercise.asaiDemo.offer.OfferInterface;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

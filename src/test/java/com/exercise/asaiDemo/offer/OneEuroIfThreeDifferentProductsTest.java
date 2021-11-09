@@ -1,6 +1,8 @@
 package com.exercise.asaiDemo.offer;
 
+import com.exercise.asaiDemo.entity.Fruit;
 import com.exercise.asaiDemo.entity.Product;
+import com.exercise.asaiDemo.offer.fruit.OneEuroIfThreeDifferentProducts;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -15,17 +17,17 @@ class OneEuroIfThreeDifferentProductsTest {
     public void oneEuroIfThreeDifferentProducts_test() {
         // given
 
-        Product product0 = new Product();
+        Fruit product0 = new Fruit();
         product0.setName("ORANGE");
         product0.setPrice(10.5);
         product0.setQuantity(10);
 
-        Product product1 = new Product();
+        Fruit product1 = new Fruit();
         product1.setName("APPLE");
         product1.setPrice(10.5);
         product1.setQuantity(10);
 
-        Product product2 = new Product();
+        Fruit product2 = new Fruit();
         product2.setName("PEAR");
         product2.setPrice(10.5);
         product2.setQuantity(10);

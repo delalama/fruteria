@@ -1,6 +1,6 @@
 package com.exercise.asaiDemo;
 
-import com.exercise.asaiDemo.repository.ProductRepository;
+import com.exercise.asaiDemo.repository.PurchaseRepository;
 import com.exercise.asaiDemo.service.BillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AsaiDemoApplication implements CommandLineRunner {
 
     @Autowired
-    ProductRepository appProducts;
+    PurchaseRepository appProducts;
 
     @Value("${business.name")
     String businessName;
@@ -29,7 +29,7 @@ public class AsaiDemoApplication implements CommandLineRunner {
     public void run(String... args) {
         printEnvironmentConfig();
 
-        billService.createFactura(appProducts.getProducts());
+        billService.createFactura(appProducts.getFruits());
     }
 
     private void printEnvironmentConfig() {

@@ -10,17 +10,17 @@ class BillTest {
 
     @Test
     public void bill_test() {
-        Product product0 = new Product();
+        Fruit product0 = new Fruit();
         product0.setName("ORANGE");
         product0.setPrice(10.5);
         product0.setQuantity(10);
 
-        Product product1 = new Product();
+        Fruit product1 = new Fruit();
         product1.setName("APPLE");
         product1.setPrice(10.5);
         product1.setQuantity(10);
 
-        Product product2 = new Product();
+        Fruit product2 = new Fruit();
         product2.setName("PEAR");
         product2.setPrice(10.5);
         product2.setQuantity(10);

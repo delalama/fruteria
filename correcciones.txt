@@ -20,8 +20,11 @@ Habiéndolo hecho a través de TDD habría sido necesario haberlo hecho de modo 
 Con declarar una interfaz y las implementaciones pertinentes ya tenemos el código ordenado, más coherente que
 un nido de IF's y escalable sin introducir malas prácticas.
 
-Ahora las ofertas tienen un proceso para comprobar si son ejecutables ,evitar nullPointers y evitar procesos innecesarios.
+Ahora las ofertas tienen un proceso para comprobar si son aplicables ,evitar nullPointers y evitar procesos innecesarios.
 Ahora las ofertas solo calculan descuentos en vez de aplicar sobre el total, ya que :
 - no es trabajo de la oferta cómo/cuando aplicar el descuento
 - permitimos que ofertas de otra naturaleza( por ejemplo una oferta que aplique porcentaje sobre montante total )
 pueda tener sentido aplicada de modo cualquiera.
+
+MEJORAS FUTURAS
+Product se podría convertir en una interfaz y crear el objeto Fruta que extienda de él para

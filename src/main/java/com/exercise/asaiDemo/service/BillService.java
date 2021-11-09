@@ -20,11 +20,11 @@ public class BillService {
         this.offerService = offerService;
     }
 
-    public Double createFactura(List<Product> products) {
+    public <T extends Product> Double  createFactura( List<T> products) {
         System.out.println("\n** NUEVA COMPRA **" + "\n-PRODUCTOS\n" + getProductsList(products));
 
         Double total = Bill.builder()
-                .products(products)
+                .products((List<Product>) products)
                 .build()
                 .getTotalPrice();
 
@@ -40,7 +40,7 @@ public class BillService {
         return total - discount;
     }
 
-    private Double calculateDiscount(List<Product> products) {
+    private <T extends Product> Double calculateDiscount(List<T> products) {
         Double discount;
 
         System.out.println("** Descuentos **");
@@ -50,7 +50,7 @@ public class BillService {
         return discount;
     }
 
-    private String getProductsList(List<Product> products) {
+    private <T extends Product> String getProductsList(List<T> products) {
         String productList = "";
 
         for (Product product : products) {
