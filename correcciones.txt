@@ -1,7 +1,5 @@
 Correción ejercicio Asaitec.
 
-Debido a priorizar un acceso al Billservice a través de html dejé de :
-
 1 - hacer tests.
 2 - homogeneizar código.
 3 - poner las propiedades private final .
@@ -9,14 +7,21 @@ Debido a priorizar un acceso al Billservice a través de html dejé de :
 5 - escalabilidad
 
 
-
+1 - Tal vez habría sido mejor idea hacer testing profundo que un acceso a través de web.
 2 - Homogeneizar código:
-Si se realizan TODOS los "for" del mismo modo mejoraremos en legibilidad.
-Al no poder resolver (rápido) mediante stream me incliné por resolverlo del modo que conozco.
+Se han corregido las iteraciones de List's que no supe realizar de modo rápido.
 
-4 - A través de @Value y @Builder mejoramos en legibilidad y seguridad durante dev.
+3 - A través de @Value y @Builder mejoramos en legibilidad y seguridad durante dev.
+
+4 - He notado la refactorización de los constructores ahora que he realizado los tests.
+Habiéndolo hecho a través de TDD habría sido necesario haberlo hecho de modo correcto.
 
 5 - El tema que dejé menos escalable fue el de las ofertas.
 Con declarar una interfaz y las implementaciones pertinentes ya tenemos el código ordenado, más coherente que
 un nido de IF's y escalable sin introducir malas prácticas.
 
+Ahora las ofertas tienen un proceso para comprobar si son ejecutables ,evitar nullPointers y evitar procesos innecesarios.
+Ahora las ofertas solo calculan descuentos en vez de aplicar sobre el total, ya que :
+- no es trabajo de la oferta cómo/cuando aplicar el descuento
+- permitimos que ofertas de otra naturaleza( por ejemplo una oferta que aplique porcentaje sobre montante total )
+pueda tener sentido aplicada de modo cualquiera.
