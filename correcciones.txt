@@ -5,11 +5,12 @@ Correción ejercicio Asaitec.
 3 - poner las propiedades private final .
 4 - no usar la inyección de dependencias de un modo reusable.
 5 - escalabilidad
-
+6 - abstracción
+7 - BigDecimal
 
 1 - Tal vez habría sido mejor idea hacer testing profundo que un acceso a través de web.
-2 - Homogeneizar código:
-Se han corregido las iteraciones de List's que no supe realizar de modo rápido.
+
+2 - Homogeneizar código, tema de espacios, lineas después del método, recorrido de Listas dispar...etc....
 
 3 - A través de @Value y @Builder mejoramos en legibilidad y seguridad durante dev.
 
@@ -20,11 +21,24 @@ Habiéndolo hecho a través de TDD habría sido necesario haberlo hecho de modo 
 Con declarar una interfaz y las implementaciones pertinentes ya tenemos el código ordenado, más coherente que
 un nido de IF's y escalable sin introducir malas prácticas.
 
+6 - He creado la clase abstracta Product para dar al software la oportunidad de vender otros
+productos que deseemos diferenciarlos de las frutas, por ejemplo llevar un stock.
 Ahora las ofertas tienen un proceso para comprobar si son aplicables ,evitar nullPointers y evitar procesos innecesarios.
 Ahora las ofertas solo calculan descuentos en vez de aplicar sobre el total, ya que :
 - no es trabajo de la oferta cómo/cuando aplicar el descuento
 - permitimos que ofertas de otra naturaleza( por ejemplo una oferta que aplique porcentaje sobre montante total )
 pueda tener sentido aplicada de modo cualquiera.
 
+7 - BigDecimal, es buena práctica para los importes utilizar BigDecimal, (RoundingModes legibles..)
+
 MEJORAS FUTURAS
-Product se podría convertir en una interfaz y crear el objeto Fruta que extienda de él para
+
+- Implementación de swagger antes de tener más controllers, mensajes de error de swagger...
+- Guardar en base de datos:
+    se ha tratado de realizar de un modo escalable, por lo que el acceso a DB bastaría que lo tuviese BillService
+    En /repository se instancia, por ejemplo, un H2 , se declara como propiedad de BillService....
+- Sistema de dividad:
+    Se podría configurar desde properties una currencyFrom y una currencyTo, de modo que
+    un conversor de monedas inyectado en BillService se encargase de cambiar la divisa.
+- Docker file.
+
