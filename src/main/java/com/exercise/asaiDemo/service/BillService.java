@@ -37,7 +37,7 @@ public class BillService {
         }
         System.out.println("A PAGAR : " + (total - discount) + " €.");
 
-        return total;
+        return total - discount;
     }
 
     private Double calculateDiscount(List<Product> products) {
