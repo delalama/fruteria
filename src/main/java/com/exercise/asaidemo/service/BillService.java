@@ -14,17 +14,21 @@ import java.util.List;
  * develop offers logic.
  */
 @Service
-@Slf4j
+@Slf4j(topic = "FRUIT SHOP")
 public class BillService {
 
     private final OfferService offerService;
+    private final PriceService priceService;
 
-    public BillService(OfferService offerService) {
+    public BillService(OfferService offerService, PriceService priceService) {
         this.offerService = offerService;
+        this.priceService = priceService;
     }
 
     public <T extends Product> BigDecimal createFactura(List<T> products) {
-        log.info("\n** NUEVA COMPRA **" + "\n-PRODUCTOS\n" + getProductsList(products));
+        List<T> productsWithPrice = priceService.setProductsPrice(products);
+
+        log.info("\n** NUEVA COMPRA **" + "\n-PRODUCTOS" + getProductsList(products));
 
         BigDecimal total = Bill.builder()
                 .products((List<Product>) products)

@@ -7,6 +7,7 @@ Correción ejercicio Asaitec.
 5 - escalabilidad
 6 - abstracción
 7 - BigDecimal
+8 - Separar cantidades de precios
 
 1 - Tal vez habría sido mejor idea hacer testing profundo que un acceso a través de web.
 
@@ -30,6 +31,10 @@ Ahora las ofertas solo calculan descuentos en vez de aplicar sobre el total, ya 
 pueda tener sentido aplicada de modo cualquiera.
 
 7 - BigDecimal, es buena práctica para los importes utilizar BigDecimal, (RoundingModes legibles..)
+
+8 - He separado la lógica, de modo que ahora un PriceService se encarga de otorgar los precios a los products.
+    Este modo actual está acarreando una duplicación de información(de nombres).
+    En este Service se podría implementar los posibles cambios de divisas.
 
 MEJORAS FUTURAS
 

@@ -1,18 +1,17 @@
 package com.exercise.asaidemo.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-
 @Getter
 @Setter
-@Component
-public abstract class Product {
-
+public class Price {
     String name;
-    Integer quantity;
     BigDecimal price;
+
+    public Price() {
+    }
 }

@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Component
-@Slf4j
+@Slf4j(topic = "FRUIT SHOP")
 public class OneEuroIfThreeDifferentProducts implements OfferInterface {
 
     public <T extends Product> BigDecimal calculate(final List<T> products) {

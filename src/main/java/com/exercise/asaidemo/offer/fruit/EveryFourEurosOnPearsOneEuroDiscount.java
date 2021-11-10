@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Component
-@Slf4j
+@Slf4j(topic = "FRUIT SHOP")
 public class EveryFourEurosOnPearsOneEuroDiscount implements OfferInterface {
 
     @Override

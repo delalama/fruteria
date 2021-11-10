@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-@Slf4j
+@Slf4j(topic = "FRUIT SHOP")
 public class BuyThreeApplesAndPayTwo implements OfferInterface {
 
     public <T extends Product> BigDecimal calculate(final List<T> products) {

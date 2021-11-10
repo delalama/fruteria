@@ -32,6 +32,6 @@ class BillControllerTest {
 
         // then
 
-        Assertions.assertTrue(total.equals(BigDecimal.valueOf(110.0)));
+        Assertions.assertTrue(total.equals(BigDecimal.valueOf(38.5)));
     }
 }

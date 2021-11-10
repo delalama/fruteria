@@ -1,10 +1,9 @@
 package com.exercise.asaidemo.repository;
 
 import com.exercise.asaidemo.entity.Fruit;
-import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
+import com.exercise.asaidemo.entity.Price;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -15,11 +14,18 @@ import java.util.List;
  * In this case we only want static data that we found in application.yml
  */
 @Component
-@ConfigurationProperties(prefix = "staticpurchase", ignoreInvalidFields = true)
+@ConfigurationProperties(prefix = "productprices", ignoreInvalidFields = true)
 @Getter
 @Setter
-public class PurchaseRepository {
+public class PriceRepository {
 
-    private List<Fruit> fruits;
+    private List<Price> prices;
 
+    public PriceRepository(List<Price> prices) {
+        this.prices = prices;
+    }
+
+    public PriceRepository() {
+    }
 }
+
