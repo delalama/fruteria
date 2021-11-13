@@ -24,3 +24,17 @@ productprices:
 active-offers: 0,1,2,3
 
 
+#SPRING CONF
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/store;DB_CLOSE_DELAY=-1
+    username:
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+    console.path: /h2-console
+    console.settings.trace: true
+    console.settings.web-allow-others: false
