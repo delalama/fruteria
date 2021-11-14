@@ -2,6 +2,7 @@ package com.exercise.asaidemo.controller;
 
 import com.exercise.asaidemo.entity.Offer;
 import com.exercise.asaidemo.repository.OfferRepository;
+import org.apache.poi.ss.formula.functions.Odd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,9 +27,6 @@ public class OfferController {
 
             offerRepository.findAll().stream()
                             .forEach(o -> offers.add(o));
-
-            if (title == null)
-                offerRepository.findAll().forEach(offers::add);
 
             if (offers.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -55,7 +53,7 @@ public class OfferController {
     public ResponseEntity<Offer> createOffer(@RequestBody Offer Offer) {
         try {
             Offer _Offer = offerRepository
-                    .save(new Offer(Offer.getName(), Offer.getFact(), Offer.getConsequence()));
+                    .save(new Offer(Offer.getId(), Offer.getName(), Offer.getFact(), Offer.getConsequence()));
             return new ResponseEntity<>(_Offer, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

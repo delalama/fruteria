@@ -24,10 +24,10 @@ public class Offer {
     @Column(name = "consequence")
     private String consequence;
 
-        public Offer(String name, String fact, String consequence) {
-        }
+    public Offer() {
+    }
 
-        public Offer(long id, String name, String fact, String consequence) {
+    public Offer(long id, String name, String fact, String consequence) {
                 this.id = id;
                 this.name = name;
                 this.fact = fact;

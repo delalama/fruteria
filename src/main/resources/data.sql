@@ -7,7 +7,7 @@ CREATE TABLE offers (
   consequence VARCHAR(250) DEFAULT NULL
 );
 
-INSERT INTO offers (name, fact, consequence) VALUES
-  ('Aliko', 'Dangote', 'Billionaire Industrialist'),
-  ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
-  ('Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
+INSERT INTO offers (id, name, fact, consequence) VALUES
+  (1, 'Aliko', 'Dangote', 'Billionaire Industrialist'),
+  (2, 'Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
+  (3, 'Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
