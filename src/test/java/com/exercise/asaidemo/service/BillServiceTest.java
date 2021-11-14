@@ -1,19 +1,13 @@
 package com.exercise.asaidemo.service;
 
 import com.exercise.asaidemo.entity.Fruit;
-import com.exercise.asaidemo.entity.Price;
 import com.exercise.asaidemo.entity.Product;
-import com.exercise.asaidemo.offer.fruit.BuyThreeApplesAndPayTwo;
-import com.exercise.asaidemo.offer.OfferInterface;
-import com.exercise.asaidemo.repository.PriceRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest

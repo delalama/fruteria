@@ -2,7 +2,7 @@ package com.exercise.asaidemo.offer;
 
 import com.exercise.asaidemo.entity.Fruit;
 import com.exercise.asaidemo.entity.Product;
-import com.exercise.asaidemo.offer.fruit.BuyThreeApplesAndPayTwo;
+import com.exercise.asaidemo.offer.offerImpl.BuyThreeApplesAndPayTwo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

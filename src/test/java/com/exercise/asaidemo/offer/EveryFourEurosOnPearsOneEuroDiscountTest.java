@@ -2,7 +2,7 @@ package com.exercise.asaidemo.offer;
 
 import com.exercise.asaidemo.entity.Fruit;
 import com.exercise.asaidemo.entity.Product;
-import com.exercise.asaidemo.offer.fruit.EveryFourEurosOnPearsOneEuroDiscount;
+import com.exercise.asaidemo.offer.offerImpl.EveryFourEurosOnPearsOneEuroDiscount;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package com.exercise.asaidemo.offer.fruit;
+package com.exercise.asaidemo.offer.offerImpl;
 
 import com.exercise.asaidemo.entity.Product;
 import com.exercise.asaidemo.offer.OfferInterface;
