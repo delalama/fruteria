@@ -1,14 +1,11 @@
 package com.exercise.asaidemo.service;
 
-import com.exercise.asaidemo.entity.Offer;
 import com.exercise.asaidemo.entity.Product;
 import com.exercise.asaidemo.offer.OfferInterface;
-import com.exercise.asaidemo.repository.OfferRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

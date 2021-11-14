@@ -1,10 +1,8 @@
 package com.exercise.asaidemo.repository;
 
 import com.exercise.asaidemo.entity.Fruit;
-import com.fasterxml.jackson.annotation.JacksonAnnotationsInside;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 

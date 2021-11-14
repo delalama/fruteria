@@ -1,7 +1,5 @@
 package com.exercise.asaidemo;
 
-import com.exercise.asaidemo.entity.Price;
-import com.exercise.asaidemo.repository.PriceRepository;
 import com.exercise.asaidemo.repository.PurchaseRepository;
 import com.exercise.asaidemo.service.BillService;
 import lombok.extern.slf4j.Slf4j;
@@ -10,8 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
 
 
 @SpringBootApplication

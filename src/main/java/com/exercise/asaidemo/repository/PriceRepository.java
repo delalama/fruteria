@@ -1,6 +1,5 @@
 package com.exercise.asaidemo.repository;
 
-import com.exercise.asaidemo.entity.Fruit;
 import com.exercise.asaidemo.entity.Price;
 import lombok.Getter;
 import lombok.Setter;
