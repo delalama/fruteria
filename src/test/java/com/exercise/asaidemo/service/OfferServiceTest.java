@@ -21,10 +21,7 @@ class OfferServiceTest {
 
     final List<String> activeOffersCodes = Arrays.asList("0","1","2","3");
 
-    @Autowired
-    OfferRepository offerRepository;
-
-    final OfferService offerService = new OfferService(offers, activeOffersCodes,offerRepository);
+    final OfferService offerService = new OfferService(offers, activeOffersCodes);
 
     @Test
     public void offerService_test () {
