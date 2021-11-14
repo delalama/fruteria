@@ -27,10 +27,9 @@ public class Offer {
     public Offer() {
     }
 
-    public Offer(long id, String name, String fact, String consequence) {
-                this.id = id;
-                this.name = name;
-                this.fact = fact;
-                this.consequence = consequence;
-        }
+    public Offer(String name, String fact, String consequence) {
+        this.name = name;
+        this.fact = fact;
+        this.consequence = consequence;
+    }
 }
