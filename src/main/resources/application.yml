@@ -1,8 +1,28 @@
+#SPRING CONF
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/store;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    username:
+    password:
+    driverClassName: org.h2.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate.ddl-auto: create-drop
+    properties.hibernate.format_sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+    console.path: /h2-console
+    console.settings.trace: false
+    console.settings.web-allow-others: false
+
+#BUSINESS CONF
 business:
   name: COLMADO JUAN
 
 
-#DATA TO EMULATE STATIC BOUGHT
+#STATIC BOUGHT
 staticpurchase:
   fruits:
     - name: PEAR
@@ -21,20 +41,6 @@ productprices:
     - name: APPLE
       price: 2
 
+#OFFERS CONF
 active-offers: 0,1,2,3
 
-
-#SPRING CONF
-spring:
-  datasource:
-    url: jdbc:h2:file:./db/store;DB_CLOSE_DELAY=-1
-    username:
-    password:
-    driverClassName: org.h2.Driver
-  jpa:
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console.enabled: true
-    console.path: /h2-console
-    console.settings.trace: true
-    console.settings.web-allow-others: false
