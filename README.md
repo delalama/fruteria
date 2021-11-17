@@ -12,4 +12,5 @@ H2 rule system to apply offers dynamically , no need to re-deploy.
 
 # Docker
 docker pull jesusdll/fruit-shop:fs
+
 docker run jesusdll/fruit-shop
