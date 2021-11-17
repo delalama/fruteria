@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11
 MAINTAINER elaltas
 COPY target/asaiDemo-0.0.1-SNAPSHOT.jar fruitshop-1.0.0.jar
-ENTRYPOINT ["java","-jar","/asaiDemo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/fruitshop-1.0.0.jar"]
